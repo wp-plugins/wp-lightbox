@@ -3,7 +3,7 @@ Author: Richard Svensson
 Tags: lightbox, gallery, photo, album, plugin, image, photos, albums, display, flash, posts, comments, gif, jpg, png
 Requires at least: 2.7
 Tested up to: 3.4
-Stable tag: 1.0
+Stable tag: trunk
 
 Add custom lightbox attribute to linked flash files or images in posts, pages and comments, group images using ID.
 
