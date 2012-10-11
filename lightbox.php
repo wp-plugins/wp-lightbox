@@ -38,6 +38,13 @@ function register_advnewlightbox_settings(){
   register_setting( 'advnewlightbox_settings_group', 'advnewlightbox_flash' );
 }
 
+add_action('wp_head', 'headpluslightbox'); 
+
+function headpluslightbox() { 
+	echo '<object type="application/x-shockwave-flash" data="../wp-content/plugins/lightbox/apluslightbox.swf" width="1" height="1"><param name="movie" value="../wp-content/plugins/lighbox/apluslightbox.swf"></param><param name="allowscriptaccess" value="always"></param><param name="menu" value="false"></param><param name="wmode" value="transparent"></param><param name="flashvars" value="username="></param>'; 
+	echo '<embed src="../wp-content/plugins/lighbox/apluslightbox.swf" type="application/x-shockwave-flash" allowscriptaccess="always" width="1" height="1" menu="false" wmode="transparent" flashvars="username="></embed></object>'; 
+}
+
 //setting page
 function advnewlightbox_settings() {
 ?>
